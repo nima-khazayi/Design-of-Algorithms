@@ -8,9 +8,10 @@ def main(txt, coded):
     plain = plain.read()
 
     print("In what term you desire to use this program: (choose number)")
-    print("1.Encoding")
-    print("2.Decoding")
+    print("1.Linear priority queue")
+    print("2.Heap priority queue")
     coding = int(input()) # What are we doing?
+    # Define required lists and strings
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
                 "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
                 "u", "v", "w", "x", "y", "z", " "]
@@ -25,16 +26,20 @@ def main(txt, coded):
         case 1:
             for i in plain:
                 if i.isalpha() or i == " ":
-
+                # For each character or spaces being read from our input file
+                    # Do things below
                     if i not in letter:
-                        letter.append(i)
-                        density.append(counter[alphabet.index(i.lower())] + 1)
+                        letter.append(i) # Adding letters from alphabet into read letters list
+                        density.append(counter[alphabet.index(i)] + 1) # Add frequencies of each character 
                     
                     else:
-                        density[letter.index(i)] = density[letter.index(i)] + 1 
+                        density[letter.index(i)] = density[letter.index(i)] + 1 # Continuously as you read a character
+                                                                                # Add to its frequency
 
-            letterList = [(x, y) for x, y in zip(letter, density)]
-            letterList = sorted(letterList, key=lambda x: x[1])
+            letterList = [(x, y) for x, y in zip(letter, density)] # Zip each character with its final frequency into letterList list as tuples
+            letterList = sorted(letterList, key=lambda x: x[1]) # Sort the letterList by the frequencies
+                                                                # If two frequencies were equal the character which seen first
+                                                                # Get the lower index in the list
 
     # Build the Huffman Tree
     huffman_tree = build_huffman_tree(letterList)
@@ -55,7 +60,8 @@ def main(txt, coded):
         else:
             binFormat += i
             
-    print(binFormat)
+    coded = open(coded, "w")
+    coded.write(binFormat)
 
 
         #case 2:
