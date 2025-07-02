@@ -1,4 +1,4 @@
-### Algorithms Design Repository
+# Algorithms Design Repository
 
 Welcome to the Design of Algorithms repo!
 This repository is dedicated to implementing and demonstrating various algorithms across
@@ -11,4 +11,4 @@ may be a comprehensive resource for understanding algorithm design and implement
 - Testing: Includes unit tests to ensure the correctness of implementations. (not for all)
 - Performance Analysis: Benchmarks and performance comparisons for different algorithms. (not for all)
 
-# Thank you for visiting the Algorithms Design Repository! Happy coding!
+### Thank you for visiting the Algorithms Design Repository! Happy coding!
