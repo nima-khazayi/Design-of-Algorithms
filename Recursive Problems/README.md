@@ -22,6 +22,7 @@ The following operations are implemented:
 2. Save the provided code in a file named 'RecursivePs.c'.
 3. Open your terminal and navigate to the directory where the file is saved.
 4. Compile the code using the following command:
+   
    ```bash
    gcc -o Recursive RecursivePs.c
    ```
